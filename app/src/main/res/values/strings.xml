@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Telegram Profile</string>
+
+    <string name="profile_image">profile_image</string>
+    <string name="youssef_ramadan">Youssef Ramadan</string>
+    <string name="subscribers">65,589 subscribers</string>
+    <string name="arrow_back_image">arrow_back_image</string>
+    <string name="menu">menu</string>
+    <string name="info">Info</string>
+    <string name="t_me">t.me/eng_youssef_ramadan</string>
+    <string name="invite_link">Invite link</string>
+    <string name="qr">qr</string>
+    <string name="notification">Notification</string>
+    <string name="on">On</string>
+    <string name="media">Media</string>
+    <string name="files">Files</string>
+    <string name="links">Links</string>
 </resources>

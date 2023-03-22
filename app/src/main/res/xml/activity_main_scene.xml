@@ -5,7 +5,7 @@
     <Transition
         motion:constraintSetEnd="@+id/collapseProfile"
         motion:constraintSetStart="@id/init"
-        motion:duration="600">
+        motion:duration="1000">
         <KeyFrameSet></KeyFrameSet>
         <OnSwipe
             motion:dragDirection="dragUp"
@@ -50,7 +50,7 @@
     <Transition
         motion:constraintSetEnd="@+id/finishCollapse"
         motion:constraintSetStart="@id/middleCollapse"
-        motion:duration="600">
+        motion:duration="300">
         <OnSwipe
             motion:touchAnchorId="@+id/cardProfile"
             motion:touchAnchorSide="bottom" />
@@ -101,14 +101,40 @@
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintStart_toStartOf="@+id/nameField" />
         </Constraint>
-
         <Constraint
             android:layout_height="wrap_content"
-            motion:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="wrap_content"
-            motion:layout_constraintTop_toBottomOf="@id/cardProfile"
+            motion:layout_constraintTop_toBottomOf="@+id/headerBackground"
             motion:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/textView4" />
+            android:layout_marginStart="16dp"
+            android:id="@+id/info_title"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="@+id/notification"
+            motion:layout_constraintBottom_toBottomOf="@+id/state"
+            android:layout_width="wrap_content"
+            android:id="@+id/switch1"
+            motion:layout_constraintVertical_bias="1.0"
+            motion:layout_constraintEnd_toEndOf="@+id/imageView" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:id="@+id/settingButton"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/link_description"
+            motion:layout_constraintStart_toStartOf="@+id/info_title"
+            android:id="@+id/line" />
+
+
     </ConstraintSet>
 
 
@@ -203,15 +229,6 @@
                 motion:layout_constraintStart_toEndOf="@+id/cardProfile" />
         </Constraint>
 
-        <Constraint android:id="@+id/fabButton">
-            <Layout
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                motion:layout_constraintBottom_toBottomOf="@id/headerBackground"
-                motion:layout_constraintTop_toBottomOf="@+id/headerBackground" />
-            <PropertySet android:visibility="visible" />
-        </Constraint>
-
     </ConstraintSet>
 
 
@@ -229,10 +246,10 @@
             android:id="@+id/cardProfile"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:layout_marginStart="56dp"
             android:layout_marginTop="8dp"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent">
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/backButton"
+            android:layout_marginStart="16dp">
             <CustomAttribute
                 motion:attributeName="radius"
                 motion:customDimension="28dp" />
@@ -270,14 +287,6 @@
                 motion:layout_constraintBottom_toBottomOf="@+id/cardProfile" />
         </Constraint>
 
-        <Constraint android:id="@+id/fabButton">
-            <Layout
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                motion:layout_constraintBottom_toBottomOf="@id/headerBackground"
-                motion:layout_constraintTop_toBottomOf="@+id/headerBackground" />
-            <PropertySet android:visibility="invisible" />
-        </Constraint>
     </ConstraintSet>
 
 </MotionScene>
